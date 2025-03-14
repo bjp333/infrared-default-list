@@ -6,6 +6,7 @@
     "berachain",
     "default",
     "token",
+    "vaults",
     "vault",
     "validator",
     "list"
