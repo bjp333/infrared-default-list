@@ -1,9 +1,9 @@
-name: Validate gauges, tokens, and validators
+name: Validate vaults, tokens, and validators
 
 on:
   pull_request:
     paths:
-      - src/gauges/**/*.json
+      - src/vaults/**/*.json
       - src/tokens/**/*.json
       - src/validator/**/*.json
       - src/schema/*.json

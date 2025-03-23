@@ -1,12 +1,12 @@
 import { readdirSync } from 'node:fs'
 
-import type { GaugesSchema } from '@/types/gauges'
+import type { GaugesSchema } from '@/types/vaults'
 
 import { getJsonFile } from './_/get-json-file'
 import { isValidNetwork } from './_/is-valid-network'
-import { sortGauges } from './_/sort-gauges'
+import { sortVaults } from './_/sort-vaults'
 
-const folderPath = 'src/gauges'
+const folderPath = 'src/vaults'
 
 readdirSync(folderPath).forEach(async (file) => {
   const network = file.replace('.json', '')
@@ -21,7 +21,7 @@ readdirSync(folderPath).forEach(async (file) => {
     path,
   })
 
-  await sortGauges({
+  await sortVaults({
     gauges: gauges.gauges,
     path,
   })
